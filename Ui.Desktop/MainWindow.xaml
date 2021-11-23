@@ -1,0 +1,59 @@
+﻿<Window x:Class="De.HsFlensburg.ClientApp101.Ui.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:De.HsFlensburg.ClientApp101.Ui.Desktop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="600"
+        x:Name="ThisWindow">
+    <Window.Resources>
+    </Window.Resources>
+    <Window.IsEnabled>
+        <Binding Source="{
+            StaticResource MessageListener
+            }" Path="BindableProperty"></Binding>
+    </Window.IsEnabled>
+    <Window.DataContext>
+        <Binding Source="{
+            StaticResource VMLocator
+            }" Path="MainWindowVM"></Binding>
+    </Window.DataContext>
+    <Grid>
+        <UniformGrid>
+            <Button Command="{
+                Binding OpenCardAddWindow, 
+                Mode=OneWay
+                }">Karte anlegen</Button>
+            <Button Command="{
+                Binding OpenManageCardsWindow, 
+                Mode=OneWay
+                }">Karte bearbeiten</Button>
+            <Button Command="{
+                Binding OpenImportWindow, 
+                Mode=OneWay
+                }">Import</Button>
+            <Button Command="{
+                Binding OpenExportWindow, 
+                Mode=OneWay
+                }">Export</Button>
+            <Button Command="{
+                Binding OpenCategoryWindow, 
+                Mode=OneWay
+                }">Kategorien verwalten</Button>
+            <Button Command="{
+                Binding OpenImportForeignFormatWindow, 
+                Mode=OneWay
+                }">Import Fremdformat</Button>
+            <Button Command="{
+                Binding OpenCardLearningWindow, 
+                Mode=OneWay
+                }">Karten lernen</Button>
+            <Button Command="{
+                Binding SaveAndCloseAll
+                }" CommandParameter="{
+                Binding ElementName=ThisWindow
+                }">Speichern</Button>
+        </UniformGrid>
+    </Grid>
+</Window>

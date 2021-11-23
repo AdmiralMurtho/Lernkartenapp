@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Netzwerkadministration-->
+<Cards>
+  <Card>
+    <Question>Was ist ein Angriff mit ARP?</Question>
+    <Answer>ARP poisoning</Answer>
+    <StatisticCollection />
+  </Card>
+  <Card>
+    <Question>Was bedeuted TTL?</Question>
+    <Answer>Time To Live</Answer>
+    <StatisticCollection />
+  </Card>
+</Cards>
